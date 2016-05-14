@@ -11,9 +11,9 @@ public class ServerConfig {
     public static boolean logAccounts = false; //Writes to a loose file called Account, unhashed.
     public static boolean DISABLE_PIC = false;
     public static final int flags = 3;
-    public static final String serverName = "Joker MS v146";
-    public static final String eventMessage = "v146 Ethereal Development!";
-    public static final String rankingURL = "http://www.acernis.org/ranking";
+    public static final String serverName = "Friend MS v146";
+    public static final String eventMessage = "v146 Friend MS Development!";
+    public static final String rankingURL = "http://google.com.vn";
     public static final int flag = 3;
     public static final int maxCharacters = 20;
     public static final int STARTER_MAP = 10000; //Maple Island
@@ -27,9 +27,9 @@ public class ServerConfig {
     
     /*Rates*/
     public static boolean fixedRates = true; //use same rates for all worlds
-    public static final int EXP = 1000; //exp rate (only works when fixedRates = true)
-    public static final int MESO = 1000; //meso rate (only works when fixedRates = true)
-    public static final int DROP = 1000; //drop rate (only works when fixedRates = true)
+    public static final int EXP = 15; //exp rate (only works when fixedRates = true)
+    public static final int MESO = 2; //meso rate (only works when fixedRates = true)
+    public static final int DROP = 2; //drop rate (only works when fixedRates = true)
     public static final int CASH_DROP_RATE = 0; //out of 100
     
     /*Red Events*/

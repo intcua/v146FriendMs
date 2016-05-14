@@ -476,6 +476,8 @@ public class CharLoginHandler {
                 ss.put(SkillFactory.getSkill(110001502), new SkillEntry((byte) 1, (byte) 1, -1));
                 ss.put(SkillFactory.getSkill(110001503), new SkillEntry((byte) 1, (byte) 1, -1));
                 ss.put(SkillFactory.getSkill(110001504), new SkillEntry((byte) 1, (byte) 1, -1));
+                ss.put(SkillFactory.getSkill(110001506), new SkillEntry((byte) 1, (byte) 1, -1));
+                ss.put(SkillFactory.getSkill(110001510), new SkillEntry((byte) 1, (byte) 1, -1));
             }
             if (job == JobType.Resistance) { // hacky fix for mech.
                 ss.put(SkillFactory.getSkill(35120000), new SkillEntry((byte) 1, (byte) 10, -1));
