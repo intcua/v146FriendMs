@@ -18,7 +18,7 @@ public class ServerConfig {
     public static final int maxCharacters = 20;
     public static final int STARTER_MAP = 10000; //Maple Island
     public static final int HOME_MAP_ID =  910000000; //xenon lab (mob version), map used for @home
-    public static final String scrollingMessage = "";
+    public static final String scrollingMessage = "Welcome to Friend MS v146";
     public static final int userLimit = 1500;
     public static String interface_;
     public static final int channelCount = 3;
@@ -30,7 +30,7 @@ public class ServerConfig {
     public static final int EXP = 15; //exp rate (only works when fixedRates = true)
     public static final int MESO = 2; //meso rate (only works when fixedRates = true)
     public static final int DROP = 2; //drop rate (only works when fixedRates = true)
-    public static final int CASH_DROP_RATE = 0; //out of 100
+    public static final int CASH_DROP_RATE = 50; //out of 100
     
     /*Red Events*/
     public static boolean RED_EVENT_10 = false; //Makes cassandra popup when you login at lvl<10 (maple island)

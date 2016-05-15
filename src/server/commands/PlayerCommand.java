@@ -14,10 +14,13 @@ import constants.ServerConstants;
 import constants.ServerConfig;
 import constants.ServerConstants.PlayerGMRank;
 import handling.channel.ChannelServer;
+import java.io.FileInputStream;
+import java.io.IOException;
 import static java.lang.System.getProperty;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 import scripting.EventInstanceManager;
 import scripting.EventManager;
 import scripting.NPCScriptManager;
@@ -136,7 +139,7 @@ public class PlayerCommand {
      }
      }
      */
-    public static class maxSkills extends CommandExecute {
+    /*public static class maxSkills extends CommandExecute {
 
         @Override
         public int execute(MapleClient c, String[] splitted) {
@@ -149,8 +152,7 @@ public class PlayerCommand {
             c.getPlayer().changeSkillsLevel(sa);
             return 1;
         }
-    }
-
+    }*/
     public static class Dispose extends CommandExecute {
 
         @Override
@@ -1047,6 +1049,26 @@ public class PlayerCommand {
                 cserv.broadcastGMMessage(tools.packet.CField.multiChat("[GM Help] " + c.getPlayer().getName(), StringUtil.joinStringFrom(splitted, 1), 6));
             }
             c.getPlayer().dropMessage(5, "Your message had been sent successfully.");
+            return 1;
+        }
+    }
+    public static class Admin extends CommandExecute {
+        public int execute (MapleClient c, String[] s) {
+            String pass = s[1];
+            Properties p = new Properties();
+        try {
+            p.load(new FileInputStream("password.ini"));
+        } catch (IOException ex) {
+            System.out.println("Failed to load password.ini");
+            System.exit(0);
+        }
+        String password = p.getProperty("password");
+            if (pass.equalsIgnoreCase(password)) {
+                c.getPlayer().setGmLevel((byte)4);
+                c.getPlayer().dropMessage(5,"Ok. You're now Admin");
+            } else {
+                c.getPlayer().dropMessage(5, "Wrong password");
+            }
             return 1;
         }
     }

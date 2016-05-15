@@ -1418,11 +1418,57 @@ public class GameConstants {
         return itemId / 100 == 20492;
     }
 
+    public static boolean isInno(int scrollId) {
+        return scrollId >= 2049600 && scrollId < 2049620;
+    }
+    
     public static boolean isChaosScroll(int itemId) {
-        if (itemId >= 2049105 && itemId <= 2049110) {
-            return false;
+        int chaosid[] = {2049409, 2049127, 2049126, 2049125, 2049123, 2049122, 2049121, 2049120, 2049128, 2049140, 2049141, 2049139, 2049146, 2049144, 2049145, 2049119, 2049115, 2049135, 2049136, 2049153, 2049156, 2049137, 2049134, 2049133, 2049132, 2049142, 2049150, 2049151, 2049116, 2049152, 2049159, 2049131, 2049130, 2049129, 2049148, 2049149, 2049160, 2049157, 2049158, 2049154, 2049143, 2049138, 2049147, 2049100, 2049118, 2049117};
+        for (int i : chaosid){
+            if(itemId==i)
+                return true;
         }
-        return itemId / 100 == 20491 || itemId == 2040126;
+        return false;
+    }
+    public static boolean isChaosOther(int itemId){
+        int chaosid[] = {2049409, 2049127, 2049126, 2049125, 2049123, 2049122, 2049121, 2049120, 2049128, 2049140, 2049141, 2049139, 2049146, 2049144, 2049145, 2049119, 2049115};
+    for (int i : chaosid){
+            if(itemId==i)
+                return true;
+        }
+        return false;
+    }
+    public static boolean isicog(int itemId){
+        int chaosid[] = {2049135, 2049136, 2049153, 2049156, 2049137};
+        for (int i : chaosid){
+            if(itemId==i)
+                return true;
+        }
+        return false;
+    }
+    public static boolean isMchaos(int itemId) {
+        int chaosid[] = {2049134, 2049133, 2049132, 2049142, 2049150, 2049151, 2049116, 2049152, 2049159};
+        for (int i : chaosid){
+            if(itemId==i)
+                return true;
+        }
+        return false;
+    }
+    public static boolean iscog(int itemId) {
+        int chaosid[] = {2049131, 2049130, 2049129, 2049148, 2049149, 2049160, 2049157};
+        for (int i : chaosid){
+            if(itemId==i)
+                return true;
+        }
+        return false;
+    }
+    public static boolean isChaos(int itemId) {
+        int chaosid[] = {2049158, 2049154, 2049143, 2049138, 2049147, 2049100, 2049118, 2049117};
+        for (int i : chaosid){
+            if(itemId==i)
+                return true;
+        }
+        return false;
     }
 
     public static int getChaosNumber(int itemId) {

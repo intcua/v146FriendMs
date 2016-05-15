@@ -780,93 +780,51 @@ public class MapleItemInformationProvider {
                         break;
                     }
                     default: {
-                        if(GameConstants.icsog(scrollId.getItemId())) {//Incredible chaos scroll of goodnes
-                            final int z = GameConstants.getChaosNumber(scrollId.getItemId());
+                        if (GameConstants.isChaosScroll(scrollId.getItemId())) {
+                            final int z = (GameConstants.isicog(scrollId.getItemId()) || GameConstants.isMchaos(scrollId.getItemId()))? 10:5;
+                            final boolean w = (GameConstants.isicog(scrollId.getItemId()) || GameConstants.iscog(scrollId.getItemId())) ? true : false;
+                            
                             if (nEquip.getStr() > 0) {
-                                nEquip.setStr((short) (nEquip.getStr() + Randomizer.nextInt(z)) );
+                                nEquip.setStr((short) (nEquip.getStr() + Randomizer.nextInt(z) * (w ? 1:(Randomizer.nextBoolean() ? 1 : -1))+1));
                             }
                             if (nEquip.getDex() > 0) {
-                                nEquip.setDex((short) (nEquip.getDex() + Randomizer.nextInt(z) ));
+                                nEquip.setDex((short) (nEquip.getDex() + Randomizer.nextInt(z) * (w ? 1:(Randomizer.nextBoolean() ? 1 : -1))+1));
                             }
                             if (nEquip.getInt() > 0) {
-                                nEquip.setInt((short) (nEquip.getInt() + Randomizer.nextInt(z)));
+                                nEquip.setInt((short) (nEquip.getInt() + Randomizer.nextInt(z) * (w ? 1:(Randomizer.nextBoolean() ? 1 : -1))+1));
                             }
                             if (nEquip.getLuk() > 0) {
-                                nEquip.setLuk((short) (nEquip.getLuk() + Randomizer.nextInt(z)));
+                                nEquip.setLuk((short) (nEquip.getLuk() + Randomizer.nextInt(z) * (w ? 1:(Randomizer.nextBoolean() ? 1 : -1))+1));
                             }
                             if (nEquip.getWatk() > 0) {
-                                nEquip.setWatk((short) (nEquip.getWatk() + Randomizer.nextInt(z) ));
+                                nEquip.setWatk((short) (nEquip.getWatk() + Randomizer.nextInt(z) * (w ? 1:(Randomizer.nextBoolean() ? 1 : -1))+1));
                             }
                             if (nEquip.getWdef() > 0) {
-                                nEquip.setWdef((short) (nEquip.getWdef() + Randomizer.nextInt(z)));
+                                nEquip.setWdef((short) (nEquip.getWdef() + Randomizer.nextInt(z) * (w ? 1:(Randomizer.nextBoolean() ? 1 : -1))+1));
                             }
                             if (nEquip.getMatk() > 0) {
-                                nEquip.setMatk((short) (nEquip.getMatk() + Randomizer.nextInt(z)));
+                                nEquip.setMatk((short) (nEquip.getMatk() + Randomizer.nextInt(z) * (w ? 1:(Randomizer.nextBoolean() ? 1 : -1))+1));
                             }
                             if (nEquip.getMdef() > 0) {
-                                nEquip.setMdef((short) (nEquip.getMdef() + Randomizer.nextInt(z)));
+                                nEquip.setMdef((short) (nEquip.getMdef() + Randomizer.nextInt(z) * (w ? 1:(Randomizer.nextBoolean() ? 1 : -1))+1));
                             }
                             if (nEquip.getAcc() > 0) {
-                                nEquip.setAcc((short) (nEquip.getAcc() + Randomizer.nextInt(z)));
+                                nEquip.setAcc((short) (nEquip.getAcc() + Randomizer.nextInt(z) * (w ? 1:(Randomizer.nextBoolean() ? 1 : -1))+1));
                             }
                             if (nEquip.getAvoid() > 0) {
-                                nEquip.setAvoid((short) (nEquip.getAvoid() + Randomizer.nextInt(z)));
+                                nEquip.setAvoid((short) (nEquip.getAvoid() + Randomizer.nextInt(z) * (w ? 1:(Randomizer.nextBoolean() ? 1 : -1))+1));
                             }
                             if (nEquip.getSpeed() > 0) {
-                                nEquip.setSpeed((short) (nEquip.getSpeed() + Randomizer.nextInt(z)));
+                                nEquip.setSpeed((short) (nEquip.getSpeed() + Randomizer.nextInt(z) * (w ? 1:(Randomizer.nextBoolean() ? 1 : -1))+1));
                             }
                             if (nEquip.getJump() > 0) {
-                                nEquip.setJump((short) (nEquip.getJump() + Randomizer.nextInt(z)));
+                                nEquip.setJump((short) (nEquip.getJump() + Randomizer.nextInt(z) * (w ? 1:(Randomizer.nextBoolean() ? 1 : -1))+1));
                             }
                             if (nEquip.getHp() > 0) {
-                                nEquip.setHp((short) (nEquip.getHp() + Randomizer.nextInt(z)));
+                                nEquip.setHp((short) (nEquip.getHp() + Randomizer.nextInt(z) * (w ? 1:(Randomizer.nextBoolean() ? 1 : -1))+1));
                             }
                             if (nEquip.getMp() > 0) {
-                                nEquip.setMp((short) (nEquip.getMp() + Randomizer.nextInt(z)));
-                            }
-                        } else if (GameConstants.isChaosScroll(scrollId.getItemId())) {
-                            final int z = GameConstants.getChaosNumber(scrollId.getItemId());
-                            if (nEquip.getStr() > 0) {
-                                nEquip.setStr((short) (nEquip.getStr() + Randomizer.nextInt(z) * (Randomizer.nextBoolean() ? 1 : -1)));
-                            }
-                            if (nEquip.getDex() > 0) {
-                                nEquip.setDex((short) (nEquip.getDex() + Randomizer.nextInt(z) * (Randomizer.nextBoolean() ? 1 : -1)));
-                            }
-                            if (nEquip.getInt() > 0) {
-                                nEquip.setInt((short) (nEquip.getInt() + Randomizer.nextInt(z) * (Randomizer.nextBoolean() ? 1 : -1)));
-                            }
-                            if (nEquip.getLuk() > 0) {
-                                nEquip.setLuk((short) (nEquip.getLuk() + Randomizer.nextInt(z) * (Randomizer.nextBoolean() ? 1 : -1)));
-                            }
-                            if (nEquip.getWatk() > 0) {
-                                nEquip.setWatk((short) (nEquip.getWatk() + Randomizer.nextInt(z) * (Randomizer.nextBoolean() ? 1 : -1)));
-                            }
-                            if (nEquip.getWdef() > 0) {
-                                nEquip.setWdef((short) (nEquip.getWdef() + Randomizer.nextInt(z) * (Randomizer.nextBoolean() ? 1 : -1)));
-                            }
-                            if (nEquip.getMatk() > 0) {
-                                nEquip.setMatk((short) (nEquip.getMatk() + Randomizer.nextInt(z) * (Randomizer.nextBoolean() ? 1 : -1)));
-                            }
-                            if (nEquip.getMdef() > 0) {
-                                nEquip.setMdef((short) (nEquip.getMdef() + Randomizer.nextInt(z) * (Randomizer.nextBoolean() ? 1 : -1)));
-                            }
-                            if (nEquip.getAcc() > 0) {
-                                nEquip.setAcc((short) (nEquip.getAcc() + Randomizer.nextInt(z) * (Randomizer.nextBoolean() ? 1 : -1)));
-                            }
-                            if (nEquip.getAvoid() > 0) {
-                                nEquip.setAvoid((short) (nEquip.getAvoid() + Randomizer.nextInt(z) * (Randomizer.nextBoolean() ? 1 : -1)));
-                            }
-                            if (nEquip.getSpeed() > 0) {
-                                nEquip.setSpeed((short) (nEquip.getSpeed() + Randomizer.nextInt(z) * (Randomizer.nextBoolean() ? 1 : -1)));
-                            }
-                            if (nEquip.getJump() > 0) {
-                                nEquip.setJump((short) (nEquip.getJump() + Randomizer.nextInt(z) * (Randomizer.nextBoolean() ? 1 : -1)));
-                            }
-                            if (nEquip.getHp() > 0) {
-                                nEquip.setHp((short) (nEquip.getHp() + Randomizer.nextInt(z) * (Randomizer.nextBoolean() ? 1 : -1)));
-                            }
-                            if (nEquip.getMp() > 0) {
-                                nEquip.setMp((short) (nEquip.getMp() + Randomizer.nextInt(z) * (Randomizer.nextBoolean() ? 1 : -1)));
+                                nEquip.setMp((short) (nEquip.getMp() + Randomizer.nextInt(z) * (w ? 1:(Randomizer.nextBoolean() ? 1 : -1))+1));
                             }
                             break;
                         } else if (GameConstants.isEquipScroll(scrollId.getItemId())) {
