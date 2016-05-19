@@ -825,7 +825,7 @@ public class CWvsContext {
         MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
 
         mplew.writeShort(SendPacketOpcode.SERVERMESSAGE.getValue());
-        mplew.write(9);
+        mplew.write(8);
         mplew.writeMapleAsciiString(msg);
         mplew.write(channel - 1);
         mplew.write(whisper ? 1 : 0);

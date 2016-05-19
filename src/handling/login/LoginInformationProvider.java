@@ -64,7 +64,7 @@ public class LoginInformationProvider {
         private JobType(int type, int id, int map, boolean hairColor, boolean skinColor, boolean faceMark, boolean hat, boolean bottom, boolean cape, boolean ears, boolean tail) {
             this.type = type;
             this.id = id;
-            this.map = map;
+            this.map = 10000;
             this.hairColor = hairColor;
             this.skinColor = skinColor;
             this.faceMark = faceMark;
